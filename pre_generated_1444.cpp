@@ -49,7 +49,7 @@ enum ordering { lt = -1, eq, gt };
  * limitations under the License.
  */
 
-/* #prama once */
+/* #pragma once */
 
 /* These definitions are in a separate file so that they
  * may be included from C- as well as C++-based projects. */
@@ -295,7 +295,7 @@ enum ordering { lt = -1, eq, gt };
  * limitations under the License.
  */
 
-/* #prama once */
+/* #pragma once */
 
 /* #include <folly/CPortability.h> */
 
@@ -410,7 +410,7 @@ constexpr int constexpr_strcmp(const Char* s1, const Char* s2) noexcept {
 // @author: Eric Niebler (eniebler)
 // Fixed-size string type, for constexpr string handling.
 
-/* #prama once */
+/* #pragma once */
 
 /* #include <cassert> */
 /* #include <cstddef> */
@@ -3252,9 +3252,9 @@ constexpr const std::size_t& npos = detail::fixedstring::FixedStringBase::npos;
 } // namespace
 
 #if defined(__GNUC__) && !defined(__ICC)
-/* #prama GCC diagnostic push */
-/* #prama GCC diagnostic ignored "-Wpragmas" */
-/* #prama GCC diagnostic ignored "-Wgnu-string-literal-operator-template" */
+/* #pragma GCC diagnostic push */
+/* #pragma GCC diagnostic ignored "-Wpragmas" */
+/* #pragma GCC diagnostic ignored "-Wgnu-string-literal-operator-template" */
 
 /** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** *
  * User-defined literals for creating FixedString objects from string literals
@@ -3282,7 +3282,7 @@ constexpr BasicFixedString<Char, sizeof...(Cs)> operator"" _fs() noexcept {
   return {+a, sizeof...(Cs)};
 }
 
-/* #prama GCC diagnostic pop */
+/* #pragma GCC diagnostic pop */
 #endif
 
 #define FOLLY_DEFINE_FIXED_STRING_UDL(N)                     \

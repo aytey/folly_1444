@@ -124,7 +124,7 @@ for to_merge in "${merge_files[@]}"; do
 done
 
 # Remove the pragmas (not all of our files have pragmas, so we do it once here)
-sed -i "s#^\#pragma \(.*\)\$#\/\* \#prama \1 \*\/#g" "${fname}"
+sed -i "s#^\#pragma \(.*\)\$#\/\* \#pragma \1 \*\/#g" "${fname}"
 
 # Now we can check if the file compiles
 ret=0
